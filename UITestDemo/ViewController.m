@@ -30,6 +30,8 @@
 
 - (IBAction)button1Click:(UIButton *)sender {
     _label1.text = [NSString stringWithFormat:@"%ld", _label1.text.integerValue + 1];
+    
+    
     [_label1 sizeToFit];
 }
 
