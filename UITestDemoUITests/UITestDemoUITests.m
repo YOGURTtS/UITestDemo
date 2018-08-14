@@ -33,8 +33,42 @@
 }
 
 - (void)testExample {
-    // Use recording to get started writing UI tests.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    XCUIElement *button1Button = app.buttons[@"Button1"];
+    [button1Button tap];
+    
+    XCUIElement *button2Button = app.buttons[@"Button2"];
+    [button2Button tap];
+    
+    XCUIElement *button3Button = app.buttons[@"Button3"];
+    [button3Button tap];
+    [button1Button tap];
+    [button1Button tap];
+    [button1Button tap];
+    [button2Button tap];
+    [button2Button tap];
+    [button2Button tap];
+    [button3Button tap];
+    [button3Button tap];
+    [button3Button tap];
+    [button1Button tap];
+    [button1Button tap];
+    [button2Button tap];
+    [button2Button tap];
+    [button3Button tap];
+    [button3Button tap];
+    [button3Button tap];
+    [button3Button tap];
+    [button3Button tap];
+    [button3Button tap];
+    [button3Button tap];
+    [button3Button tap];
+    [button3Button tap];
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationFaceUp;
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationPortrait;
+    [XCUIDevice sharedDevice].orientation = UIDeviceOrientationFaceUp;
 }
 
 @end
